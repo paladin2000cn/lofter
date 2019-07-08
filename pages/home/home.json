@@ -1,0 +1,7 @@
+{
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "jbj-banner": "/components/banner/banner",
+    "van-icon": "/miniprogram_npm/vant-weapp/icon/index"
+  }
+}

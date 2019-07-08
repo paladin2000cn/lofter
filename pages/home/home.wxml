@@ -1,0 +1,214 @@
+<wxs src="../../wxs/subutil.wxs" module="tools" />
+
+
+<!--banner-->
+
+
+<jbj-banner banners="{{banners}}"></jbj-banner>
+
+
+
+<!--金刚位-->
+
+
+<view style="display: flex;flex-direction: row;justify-content: space-between;align-items: center;height: 100rpx;padding: 20rpx">
+
+    <view style="display: flex;flex-direction: column;justify-content: center;align-items: center" wx:for="{{KingList}}" wx:key bindtap="clickKing" data-type="{{item.type}}" data-id="{{item.id}}" data-key="{{item.key}}" data-name="{{item.name}}">
+        <van-icon name="{{item.type}}" />
+       <view class="f28">
+           {{item.name}}
+       </view>
+    </view>
+
+
+
+</view>
+
+
+
+
+<!--捷报-->
+<view>
+
+    <view style="display: flex;flex-direction: row;justify-content: space-between;padding: 0 20rpx 0 20rpx;height: 80rpx;align-items: center">
+
+        <view class="f32"style="color: #3B3B3B;font-weight: 500">
+            {{newTitle}}
+        </view>
+
+
+        <view class="f22" style="color: #656565" bindtap="clickMore">
+            more <i class="iconfont icon-fanhui1" style="color: #656565;font-size: 16rpx;"></i>
+        </view>
+
+    </view>
+
+    <view class="type-container van-hairline--bottom">
+        <scroll-view  scroll-x="{{true}}" class="type-navbar" >
+            <view  class="moneypop" wx:for="{{JieBaoList}}" wx:key bindtap="clickJB" data-type="{{item.type}}" data-id="{{item.id}}">
+
+                <image mode="scaleToFill"  src="{{item.pic}}"  style="width: 380rpx;height: 200rpx;border-radius: 5rpx"/>
+
+                <view  class="f28"style="color: #3B3B3B;font-weight: 400">
+                    {{item.title}}
+                </view>
+
+                <view class="f22" style="color: #656565">
+                    {{item.descript}}
+                </view>
+
+            </view>
+        </scroll-view>
+    </view>
+
+</view>
+
+
+
+
+<!--简章-->
+
+<!--招生简章-->
+
+
+<view>
+    <view style="display: flex;flex-direction: row;justify-content: space-between;padding: 0 20rpx 0 20rpx;height: 80rpx;align-items: center">
+
+        <view class="f32"style="color: #3B3B3B;font-weight: 500">
+            简章
+        </view>
+
+
+        <view class="f22" style="color: #656565" bindtap="clickMoreJianZhang">
+
+            more <i class="iconfont icon-fanhui1" style="color: #656565;font-size: 16rpx;"></i>
+        </view>
+
+
+    </view>
+
+
+    <view class="van-hairline--bottom" wx:for="{{articleList}}" wx:key data-url="{{item.income}}" bindtap="clickNews" data-id="{{item.id}}">
+
+        <view class="container">
+            <!--文字标题-->
+            <view style="display: flex;flex-direction: column;justify-content: space-around;align-items: flex-start;height: 240rpx;">
+
+                <!--标题-->
+
+                <view style="display: flex;flex-direction: column;justify-content: space-between">
+                    <view style="color: #3B3B3B;font-size: 28rpx;font-weight: 800;padding-right: 10rpx" >
+                        {{item.title}}
+                    </view>
+
+                    <view style="color: #656565;font-size: 22rpx;">
+                        {{item.descript}}
+                    </view>
+                </view>
+
+
+                <view style="display: flex;flex-direction: row;align-items: center;height: 90rpx;">
+                    <view>
+                        <image src="{{logo}}" style="width: 50rpx;height: 50rpx;border-radius: 25rpx" />
+                    </view>
+
+                    <view style="color: #656565;margin-left: 10rpx;" class="f22">
+                        {{author}}  {{tools.sub(item.dateUpdate)}}
+                    </view>
+                </view>
+
+
+
+            </view>
+            <!--图片-->
+            <view>
+                <image src="{{item.pic}}" style="width: 250rpx;height: 180rpx;border-radius: 7rpx" mode="aspectFill"/>
+            </view>
+
+        </view>
+
+
+
+    </view>
+
+
+</view>
+
+
+<!--班型设置-->
+
+
+<view>
+    <view style="display: flex;flex-direction: row;justify-content: space-between;padding: 0 20rpx 0 20rpx;height: 80rpx;align-items: center">
+
+        <view class="f32"style="color: #3B3B3B;font-weight: 500">
+            2020年班型
+        </view>
+
+
+        <view class="f22" style="color: #656565" bindtap="clickMoreBan">
+
+            more <i class="iconfont icon-fanhui1" style="color: #656565;font-size: 16rpx;"></i>
+        </view>
+
+
+    </view>
+
+
+    <view style="display: flex;flex-direction: row;justify-content: space-between;height: 240rpx;padding: 20rpx;" wx:for="{{HomeGood}}" wx:key bindtap="toDetailsTap" data-id="{{item.id}}">
+
+
+        <view style="display: flex;flex-direction: row;flex: 4;">
+
+            <image mode="scaleToFill"  src="{{item.pic}}"  style="width: 240rpx;height: 240rpx;border-radius: 5rpx;margin-right: 30rpx"/>
+
+            <view style="display: flex;flex-direction: column;justify-content: space-between">
+
+                <view>
+                    <view class="f28"style="color: #3B3B3B;font-weight: 400;margin-bottom: 10rpx">{{item.name}}</view>
+                    <view class="f22" style="color: #656565">{{item.characteristic}}</view>
+                </view>
+
+
+                <view style="display: flex;flex-direction: row;align-items: center">
+
+                    <view style="display: flex;flex-direction: row;justify-content: center;align-items: center;width: 75rpx;height: 35rpx;background-color: #656565;color: white;font-size: 20rpx;border-radius: 5rpx;margin-right: 10rpx">
+                        特惠
+                    </view>
+
+                    <view class="f28"style="font-weight: 600;margin-right: 10rpx;color: red">￥{{item.minPrice}}.00 </view>
+
+                </view>
+
+
+                <view style="display: flex;flex-direction: row;justify-content: flex-start;align-items: center">
+
+                    <view class="f28"style="color: #656565;margin-right: 10rpx;text-decoration: line-through">￥{{item.originalPrice}}.00 </view>
+                    <view class="f22" style="color: #656565"> 仅剩{{item.stores}}个名额</view>
+
+                </view>
+
+
+            </view>
+
+
+        </view>
+
+
+        <!--角标-->
+        <view style="background-color: #656565;display: flex;flex-direction: row;justify-content: center;height: 35rpx;align-items: center;width: 75rpx;color: white;font-size: 20rpx;border-radius: 5rpx">
+            {{item.recommendStatusStr}}
+        </view>
+
+    </view>
+
+
+</view>
+
+
+
+
+
+
+
+

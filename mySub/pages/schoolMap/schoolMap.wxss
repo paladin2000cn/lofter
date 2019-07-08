@@ -1,0 +1,4 @@
+/* mySub/pages/schoolMap/schoolMap.wxss */
+page{
+    height: 100%;
+}

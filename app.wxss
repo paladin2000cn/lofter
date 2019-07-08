@@ -1,0 +1,54 @@
+/**app.wxss**/
+
+.f36{
+    /*首页分栏标题*/
+    /*font-weight: 600;*/
+    font-size: 36rpx;
+}
+.f32{
+    /*卡片 导航栏 详情页*/
+    /*font-weight: 400;*/
+    font-size: 32rpx;
+}
+.f28{
+    /*副标题 小卡片 tab栏*/
+    /*font-weight: 500;*/
+    font-size: 28rpx;
+}
+.f24{
+    /*按钮 重要文字*/
+    /*font-weight: 500;*/
+    font-size: 24rpx;
+}
+.f22{
+    /*小按钮文字 正文 说明性文字*/
+    /*font-weight: 400;*/
+    font-size: 22rpx;
+}
+.f20{
+    /*标签文字 注解文字*/
+    /*font-weight: 400;*/
+    font-size: 20rpx;
+}
+.mainTitleColor{
+    /*正文标题*/
+    color: #000104;
+}
+.subTitleColor{
+    /*副标题*/
+    color: #8F99A7 ;
+}
+.sub2TitleColor{
+    /*次要信息*/
+    color: #C0C8D3 ;
+}
+.bgColor{
+    /*背景颜色*/
+    color: #F6F6F6;
+}
+
+.divider{
+    background-color: rgba(245,242,242,1);
+    width: 100%;
+    height: 5rpx
+}

@@ -1,0 +1,24 @@
+/* pages/jingyan/jingyan.wxss */
+
+@import "/miniprogram_npm/vant-weapp/common/index.wxss";
+@import "../../../iconFont/iconFont.wxss";
+@import "../../../app.wxss";
+
+
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+    height: 240rpx;
+    padding: 0 10rpx 0 10rpx;
+}
+
+/*没有数据*/
+.no-more-goods{
+    text-align: center;
+    font-size: 24rpx;
+    padding-bottom:48rpx;
+    color: #999;
+}
