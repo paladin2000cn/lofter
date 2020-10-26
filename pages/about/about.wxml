@@ -7,15 +7,10 @@
     <view style="display: flex;flex-direction: column;height: 280rpx;background-color: white;justify-content: center;align-items: center">
         <image    src='{{ava}}' mode='aspectFit'  class="avaStyle"></image>
        <!--
-        <text style="font-size: 25rpx">一支画笔,画出你自己，画出你的全世界</text>
+        <text style="font-size: 25rpx">Carrie English</text>
        -->
 
-
     </view>
-
-
-
-
         <van-cell
                 wx:for="{{info}}"
                 wx:key="index"

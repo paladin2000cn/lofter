@@ -1,48 +1,25 @@
 <wxs src="../../wxs/subutil.wxs" module="tools" />
-
-
 <!--banner-->
-
-
 <jbj-banner banners="{{banners}}"></jbj-banner>
-
-
-
 <!--金刚位-->
-
-
 <view style="display: flex;flex-direction: row;justify-content: space-between;align-items: center;height: 100rpx;padding: 20rpx">
-
     <view style="display: flex;flex-direction: column;justify-content: center;align-items: center" wx:for="{{KingList}}" wx:key bindtap="clickKing" data-type="{{item.type}}" data-id="{{item.id}}" data-key="{{item.key}}" data-name="{{item.name}}">
         <van-icon name="{{item.type}}" />
        <view class="f28">
            {{item.name}}
        </view>
     </view>
-
-
-
 </view>
-
-
-
-
 <!--捷报-->
 <view>
-
-    <view style="display: flex;flex-direction: row;justify-content: space-between;padding: 0 20rpx 0 20rpx;height: 80rpx;align-items: center">
-
+   <view style="display: flex;flex-direction: row;justify-content: space-between;padding: 0 20rpx 0 20rpx;height: 80rpx;align-items: center">
         <view class="f32"style="color: #3B3B3B;font-weight: 500">
             {{newTitle}}
         </view>
-
-
         <view class="f22" style="color: #656565" bindtap="clickMore">
             more <i class="iconfont icon-fanhui1" style="color: #656565;font-size: 16rpx;"></i>
         </view>
-
     </view>
-
     <view class="type-container van-hairline--bottom">
         <scroll-view  scroll-x="{{true}}" class="type-navbar" >
             <view  class="moneypop" wx:for="{{JieBaoList}}" wx:key bindtap="clickJB" data-type="{{item.type}}" data-id="{{item.id}}">
@@ -62,32 +39,18 @@
     </view>
 
 </view>
-
-
-
-
 <!--简章-->
-
 <!--招生简章-->
-
-
 <view>
     <view style="display: flex;flex-direction: row;justify-content: space-between;padding: 0 20rpx 0 20rpx;height: 80rpx;align-items: center">
 
         <view class="f32"style="color: #3B3B3B;font-weight: 500">
             简章
         </view>
-
-
         <view class="f22" style="color: #656565" bindtap="clickMoreJianZhang">
-
             more <i class="iconfont icon-fanhui1" style="color: #656565;font-size: 16rpx;"></i>
         </view>
-
-
     </view>
-
-
     <view class="van-hairline--bottom" wx:for="{{articleList}}" wx:key data-url="{{item.income}}" bindtap="clickNews" data-id="{{item.id}}">
 
         <view class="container">
